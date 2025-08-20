@@ -1,0 +1,104 @@
+/* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      background: #0e0e0e;
+      color: #fff;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 30px;
+      color: #ffce00;
+      animation: fadeInDown 1s ease;
+    }
+
+    /* Grid Layout */
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    /* Event Card */
+    .event-card {
+      background: #1a1a1a;
+      border-radius: 15px;
+      overflow: hidden;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 224, 255, 0.2);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: fadeInUp 1s ease forwards;
+      opacity: 0;
+    }
+
+    .event-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-bottom: 3px solid #00e0ff;
+    }
+
+    .event-card:hover {
+      transform: translateY(-10px) scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 224, 255, 0.4);
+    }
+
+    .event-card h3 {
+      color: #00e0ff;
+      margin: 15px 0 8px;
+      font-size: 1.3rem;
+    }
+
+    .event-card p {
+      color: #bbb;
+      font-size: 0.95rem;
+      padding: 0 15px 20px;
+    }
+
+    /* Keyframes */
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .event-card:nth-child(1) { animation-delay: 0.2s; }
+    .event-card:nth-child(2) { animation-delay: 0.4s; }
+    .event-card:nth-child(3) { animation-delay: 0.6s; }
+    .event-card:nth-child(4) { animation-delay: 0.8s; }
+
+    /* Responsive Text */
+    @media (max-width: 600px) {
+      h2 {
+        font-size: 1.6rem;
+      }
+      .event-card img {
+        height: 150px;
+      }
+    }

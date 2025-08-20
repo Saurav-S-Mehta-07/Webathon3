@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+  <div class="contact-form">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="mobile">Mobile Number:</label>
+        <input type="tel" id="mobile" pattern="[0-9]{10}" placeholder="10-digit number" required>
+      </div>
+      <div class="form-group">
+        <label for="query">Your Query:</label>
+        <textarea id="query" required></textarea>
+      </div>
+      <button type="submit" class="submit-btn">Submit</button>
+      <div class="success" id="successMsg">✅ Your query has been submitted!</div>
+    </form>
+  </div>
+
+  <script src="contact.js"> </script>
+
+</body>
+</html>

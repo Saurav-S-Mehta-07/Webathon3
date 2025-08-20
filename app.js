@@ -22,7 +22,7 @@ eventA.innerText = "Event";
 contactA.innerText = "Contact";
 homeA.setAttribute("href","#home");
 eventA.setAttribute("href","event.html");
-contactA.setAttribute("href","#contact");
+contactA.setAttribute("href","contact.html");
 
 bar.addEventListener("click",function(event){
    event.stopPropagation();
